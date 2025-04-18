@@ -1,0 +1,240 @@
+
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:orientation="vertical"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:padding="16dp">-->
+
+<!--    &lt;!&ndash; 采集控制部分 &ndash;&gt;-->
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:gravity="center_horizontal">-->
+
+<!--        &lt;!&ndash; 开始/停止按钮 &ndash;&gt;-->
+<!--        <Button-->
+<!--            android:id="@+id/start_stop_button"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="开始"-->
+<!--            android:layout_weight="1"-->
+<!--            android:padding="4dp"-->
+<!--            android:minWidth="60dp" />-->
+
+<!--        &lt;!&ndash; 提交按钮（默认隐藏） &ndash;&gt;-->
+<!--        <Button-->
+<!--            android:id="@+id/upload_button"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="16dp"-->
+<!--            android:text="提交"-->
+<!--            android:layout_weight="1"-->
+<!--            android:padding="4dp"-->
+<!--            android:minWidth="60dp"-->
+<!--            android:visibility="gone" />-->
+<!--    </LinearLayout>-->
+
+<!--    &lt;!&ndash; 采样时间 &ndash;&gt;-->
+<!--    <TextView-->
+<!--        android:id="@+id/timer_text"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="采样时间："-->
+<!--        android:layout_marginTop="16dp" />-->
+
+<!--    &lt;!&ndash; 采样率部分 &ndash;&gt;-->
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:layout_marginTop="8dp">-->
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="采样率：" />-->
+
+<!--        &lt;!&ndash; 采样率输入框 &ndash;&gt;-->
+<!--        <EditText-->
+<!--            android:id="@+id/frequency_input"-->
+<!--            android:layout_width="40dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:inputType="number"-->
+<!--            android:layout_marginEnd="8dp" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/set_frequency_button"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="设置"-->
+<!--            android:minWidth="40dp"-->
+<!--            android:minHeight="30dp"-->
+<!--            android:padding="2dp"/>-->
+<!--    </LinearLayout>-->
+
+<!--    &lt;!&ndash; 加速度计数据显示 &ndash;&gt;-->
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="加速度计：" />-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="vertical"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:padding="8dp"-->
+<!--        android:background="@android:color/darker_gray">-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/acceleration_data"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="X: , Y: , Z: " />-->
+<!--    </LinearLayout>-->
+
+<!--    &lt;!&ndash; 陀螺仪数据显示 &ndash;&gt;-->
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="陀螺仪：" />-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="vertical"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:padding="8dp"-->
+<!--        android:background="@android:color/darker_gray">-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/gyroscope_data"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="X: , Y: , Z: " />-->
+<!--    </LinearLayout>-->
+
+<!--</LinearLayout>-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- 采集控制部分 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+
+            <!-- 开始/停止按钮 -->
+            <Button
+                android:id="@+id/start_stop_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="开始"
+                android:layout_weight="1"
+                android:padding="4dp"
+                android:minWidth="60dp" />
+
+            <!-- 提交按钮（默认隐藏） -->
+            <Button
+                android:id="@+id/upload_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="提交"
+                android:layout_weight="1"
+                android:padding="4dp"
+                android:minWidth="60dp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <!-- 采样时间 -->
+        <TextView
+            android:id="@+id/timer_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="采样时间："
+            android:layout_marginTop="16dp" />
+
+        <!-- 采样率部分 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="采样率：" />
+
+            <!-- 采样率输入框 -->
+            <EditText
+                android:id="@+id/frequency_input"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/set_frequency_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="设置"
+                android:minWidth="40dp"
+                android:minHeight="30dp"
+                android:padding="2dp" />
+        </LinearLayout>
+
+        <!-- 加速度计数据显示 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="加速度计：" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="8dp"
+            android:padding="8dp"
+            android:background="@android:color/darker_gray">
+
+            <TextView
+                android:id="@+id/acceleration_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="X: , Y: , Z: " />
+        </LinearLayout>
+
+        <!-- 陀螺仪数据显示 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="陀螺仪：" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="8dp"
+            android:padding="8dp"
+            android:background="@android:color/darker_gray">
+
+            <TextView
+                android:id="@+id/gyroscope_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="X: , Y: , Z: " />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
